@@ -1,6 +1,6 @@
 # Lecture 3 — Working with Biological Files (FASTA, GTF) using Linux
 Lecture 3 – Command Index (Linux + Biological Files)
-1. Viewing Biological Files Safely
+# 1. Viewing Biological Files Safely
 
 cat
 
@@ -14,7 +14,7 @@ tail
 
 sed -n '1,50p'
 
-2. Understanding FASTA Structure
+# 2. Understanding FASTA Structure
 
 grep "^>"
 
@@ -22,7 +22,7 @@ grep -c "^>"
 
 grep -v "^>"
 
-3. Counting and Measuring Sequences
+# 3. Counting and Measuring Sequences
 
 wc
 
@@ -32,7 +32,7 @@ wc -m
 
 wc -w
 
-4. Searching Patterns in Biological Files
+# 4. Searching Patterns in Biological Files
 
 grep
 
@@ -46,7 +46,7 @@ grep -v
 
 grep -c
 
-5. Regex Concepts Used in Bioinformatics
+# 5. Regex Concepts Used in Bioinformatics
 
 ^ (start of line)
 
@@ -58,17 +58,17 @@ grep -c
 
 [ ] (character sets)
 
-6. Case Normalization of Sequences
+# 6. Case Normalization of Sequences
 
 tr 'a-z' 'A-Z'
 
-7. Pipelines and Data Flow
+# 7. Pipelines and Data Flow
 
 |
 
 Command chaining with pipes
 
-8. FASTA Quality Control Pipelines
+# 8. FASTA Quality Control Pipelines
 
 grep -v "^>" file.fasta
 
@@ -78,13 +78,13 @@ grep -v "^>" file.fasta | tr 'a-z' 'A-Z'
 
 grep -v "^>" file.fasta | grep "[^ATGC]"
 
-9. GTF / Annotation File Handling
+# 9. GTF / Annotation File Handling
 
 Understanding tab-separated columns
 
 Feature filtering (gene, transcript, exon)
 
-10. Extracting Fields from GTF Files
+# 10. Extracting Fields from GTF Files
 
 awk -F'\t'
 
@@ -92,7 +92,7 @@ $1, $3, $4, $5, $9
 
 Conditional filtering in awk
 
-11. Transcript and Gene ID Extraction
+# 11. Transcript and Gene ID Extraction
 
 grep 'gene_id'
 
@@ -104,7 +104,7 @@ sort
 
 uniq
 
-12. Redirecting Output
+# 12. Redirecting Output
 
 >
 
@@ -114,19 +114,19 @@ uniq
 
 Combining stdout and stderr
 
-13. Creating Derived Files
+# 13. Creating Derived Files
 
 Saving filtered GTF files
 
 Creating intermediate outputs for downstream steps
 
-14. Extracting Specific Sequences
+# 14. Extracting Specific Sequences
 
 Header-based extraction logic
 
 Printing until next FASTA header using awk
 
-15. Biological Reasoning with Linux Tools
+# 15. Biological Reasoning with Linux Tools
 
 Linking FASTA ↔ GTF
 
@@ -134,7 +134,7 @@ Understanding transcripts vs genes
 
 Mapping sequence entries to annotations
 
-16. Common Errors Encountered (Learning Moments)
+# 16. Common Errors Encountered (Learning Moments)
 
 Forgetting file name in grep
 
@@ -146,7 +146,7 @@ Confusing headers vs sequences
 
 Running commands in wrong directory
 
-17. Where This Appears in Real Pipelines 🧪
+# 17. Where This Appears in Real Pipelines 🧪
 
 FASTA validation
 
